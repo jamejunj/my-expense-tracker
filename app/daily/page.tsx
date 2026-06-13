@@ -31,8 +31,8 @@ export default function DailyPage() {
   )
   const [data, setData] = useState<DailyExpense>({
     month,
-    limit_per_day: 350,
-    monthly_extras: 1500,
+    limit_per_day: 0,
+    monthly_extras: 0,
     paymentMethods: DEFAULT_PAYMENT_METHODS,
     transactions: [],
   })
@@ -65,7 +65,7 @@ export default function DailyPage() {
       setData(existing)
     } else {
       const bp = getBudgetPlan(m)
-      let limit = 350, extras = 1500
+      let limit = 0, extras = 0
       if (bp) { const c = calcBudget(bp); limit = c.dailyBudget; extras = bp.monthly_extras }
       setData({ month: m, limit_per_day: limit, monthly_extras: extras, paymentMethods: DEFAULT_PAYMENT_METHODS, transactions: [] })
     }

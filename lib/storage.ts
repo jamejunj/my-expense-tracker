@@ -62,64 +62,10 @@ export const GROUP_COLORS: Record<string, { hex: string; tag: string }> = {
 export const COLOR_KEYS = Object.keys(GROUP_COLORS)
 
 // ─── Defaults ─────────────────────────────────────────────────────────────────
-export const DEFAULT_PAYMENT_METHODS: PaymentMethod[] = [
-  { id: 'money',     label: 'Money'     },
-  { id: 'cc_shopee', label: 'CC-Shopee' },
-  { id: 'cc_line',   label: 'CC-LINE'   },
-  { id: 'cc_blue',   label: 'CC-Blue'   },
-  { id: 'cc_ktc',    label: 'CC-KTC'    },
-  { id: 'others',    label: 'Others'    },
-]
+export const DEFAULT_PAYMENT_METHODS: PaymentMethod[] = []
 
 export function defaultBudgetPlan(month: string): BudgetPlan {
-  return {
-    month,
-    monthly_extras: 1500,
-    groups: [
-      {
-        id: 'g_income', name: 'รายได้', type: '+', emoji: '💵', color: 'emerald',
-        items: [{ id: genId(), label: 'เงินเดือน', amount: 30900 }],
-      },
-      {
-        id: 'g_invest', name: 'Investment', type: '-', emoji: '📈', color: 'blue',
-        items: [
-          { id: genId(), label: 'PVD',  amount: 3090  },
-          { id: genId(), label: 'SSO',  amount: 750   },
-          { id: genId(), label: 'TAX',  amount: 60.43 },
-        ],
-      },
-      {
-        id: 'g_saving', name: 'Saving', type: '-', emoji: '🏦', color: 'teal',
-        items: [
-          { id: genId(), label: 'KPT',      amount: 5000 },
-          { id: genId(), label: 'K-GTECH',  amount: 500  },
-          { id: genId(), label: 'K-USXNDQ', amount: 500  },
-          { id: genId(), label: 'K-USA(A)', amount: 500  },
-          { id: genId(), label: 'STOCK',    amount: 1000 },
-        ],
-      },
-      {
-        id: 'g_debt', name: 'Debt', type: '-', emoji: '💳', color: 'red',
-        items: [
-          { id: genId(), label: 'Xpress', amount: 4959 },
-          { id: genId(), label: 'KTC',    amount: 5615 },
-        ],
-      },
-      {
-        id: 'g_infra', name: 'Infrastructure', type: '-', emoji: '🔧', color: 'purple',
-        items: [
-          { id: genId(), label: 'TRUE',    amount: 280 },
-          { id: genId(), label: 'AIS',     amount: 10  },
-          { id: genId(), label: 'iCloud',  amount: 35  },
-          { id: genId(), label: 'YTPM',    amount: 159 },
-        ],
-      },
-      {
-        id: 'g_charity', name: 'การกุศล', type: '-', emoji: '🙏', color: 'pink',
-        items: [{ id: genId(), label: 'อุปการะ', amount: 500 }],
-      },
-    ],
-  }
+  return { month, monthly_extras: 0, groups: [] }
 }
 
 // ─── Budget Calculator ────────────────────────────────────────────────────────
