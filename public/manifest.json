@@ -1,0 +1,25 @@
+{
+  "name": "บัญชีรายรับรายจ่าย",
+  "short_name": "Finance",
+  "description": "Personal Finance Tracker",
+  "start_url": "/my-expense-tracker/",
+  "scope": "/my-expense-tracker/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/my-expense-tracker/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/my-expense-tracker/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
