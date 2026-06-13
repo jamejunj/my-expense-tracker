@@ -161,12 +161,11 @@ export default function BudgetPage() {
         </div>
 
         {/* ── Summary chips ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
           {[
             { label: 'สุทธิหลังหักทั้งหมด', val: calc.afterAll, color: calc.afterAll >= 0 ? '#10b981' : '#ef4444' },
             { label: 'งบต่อวัน', val: calc.dailyBudget, color: '#3b82f6' },
             { label: 'จำนวนวัน', val: calc.daysInMonth, color: '#64748b', isInt: true },
-            { label: 'Monthly Extras', val: plan.monthly_extras, color: '#f97316' },
           ].map(c => (
             <div key={c.label} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
               <p className="text-xs text-gray-400">{c.label}</p>
