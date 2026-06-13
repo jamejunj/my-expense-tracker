@@ -292,7 +292,7 @@ export default function DailyPage() {
           <div className="flex flex-wrap items-end gap-5">
             {[
               { label: 'งบต่อวัน', key: 'limit_per_day' as const },
-              { label: 'Monthly Extras', key: 'monthly_extras' as const },
+              { label: 'เงินพิเศษ', key: 'monthly_extras' as const },
             ].map(f => (
               <div key={f.key}>
                 <label className="block text-xs text-gray-400 mb-1">{f.label} (บาท)</label>
@@ -471,7 +471,7 @@ export default function DailyPage() {
               {/* Month Remain */}
               <tr className="bg-slate-50">
                 <td className="sticky left-0 z-10 bg-slate-100 border-r border-gray-200 px-4 py-2 text-gray-600 font-medium">
-                  Month Remain <div className="text-[10px] text-gray-400 font-normal">extras + Σ daily</div>
+                  Month Remain <div className="text-[10px] text-gray-400 font-normal">เงินพิเศษ + Σ daily</div>
                 </td>
                 <td className="sticky left-[110px] z-10 bg-slate-100 border-r border-gray-200 px-3 py-2 text-right font-bold text-gray-800">
                   {fmt(netRemain, 0)}
